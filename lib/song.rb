@@ -47,8 +47,9 @@ class Song
   end 
   
   def self.create_from_filename(file_name)
+    file_name = file_name.split(/[-.]/).
+    
     song = Song.new 
-    song.name = file_name.split(".").pop.to_s 
     self.all << song 
     song
   end 
